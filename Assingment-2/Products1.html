@@ -49,10 +49,9 @@
                         <div>
                             {productName}
                         </div>
-                        <input type="button" value="Remove" onClick={() =>{  
-                            var array = [...this.state.productNames]; 
-                            array.splice(index, 1);
-                            this.setState({productNames: array});
+                        <input type="button" value="Remove" onClick={() =>{ 
+                            const newProductNames = productNames.filter(product => product !== productName);
+                            this.setState({productNames: newProductNames});
                             }
                         }/>
                     </li>
