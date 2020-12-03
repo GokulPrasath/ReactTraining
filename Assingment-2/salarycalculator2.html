@@ -118,7 +118,7 @@
                 return(
                     <div className="field">
                         <label htmlFor="">{labelText}</label>
-                        <input type={inputType} onChange={ e => onValueChange(e.target.value) }  />
+                        <input type={inputType} onChange={ e => onValueChange(parseInt(e.target.value)) }  />
                     </div>
                 )
             }
