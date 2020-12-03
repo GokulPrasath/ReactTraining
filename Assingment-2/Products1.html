@@ -30,8 +30,7 @@
             };
             onAddClick = () => {
                 const newProductNames = [ ...this.state.productNames, this.state.newProductName ];
-                this.setState({ productNames: newProductNames });
-                this.setState({newProductName : ''});
+                this.setState({ productNames: newProductNames, newProductName : ''});
             }
 
            
@@ -54,7 +53,7 @@
                             var array = [...this.state.productNames]; 
                             array.splice(index, 1);
                             this.setState({productNames: array});
-                        }
+                            }
                         }/>
                     </li>
                 ));
