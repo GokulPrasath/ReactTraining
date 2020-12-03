@@ -54,19 +54,19 @@
                             <section>
                                 <div className="field">
                                     <label htmlFor="">Basic :</label>
-                                    <input type="number" name="" id="txtBasic" onChange ={(evt) =>{ this.setState({basic :evt.target.value})}}/>
+                                    <input type="number" name="" id="txtBasic" onChange ={(evt) =>{ this.setState({basic :parseInt(evt.target.value)})}}/>
                                 </div>
                                 <div className="field">
                                     <label htmlFor="">HRA :</label>
-                                    <input type="number" name="" id="txtHra"  onChange ={(evt) =>{ this.setState({hra :evt.target.value})}}/>
+                                    <input type="number" name="" id="txtHra"  onChange ={(evt) =>{ this.setState({hra :parseInt(evt.target.value)})}}/>
                                 </div>
                                 <div className="field">
                                     <label htmlFor="">DA :</label>
-                                    <input type="number" name="" id="txtDa"  onChange ={(evt) =>{ this.setState({da :evt.target.value})}}/>
+                                    <input type="number" name="" id="txtDa"  onChange ={(evt) =>{ this.setState({da :parseInt(evt.target.value)})}}/>
                                 </div>
                                 <div className="field">
                                     <label htmlFor="">Tax :</label>
-                                    <input type="range" name="" id="rangeTax" min="0" max="30" value="0" onChange ={(evt) =>{ this.setState({tax :evt.target.value})}}/>
+                                    <input type="range" name="" id="rangeTax" min="0" max="30" onChange ={(evt) =>{ this.setState({tax :parseInt(evt.target.value)})}}/>
                                 </div>
                                 <div className="field">
                                     <input type="button" value="Calculate" id="btnCalculate" onClick = {this.calculate}/>
@@ -89,13 +89,7 @@
                 )
             }
         }
-
-        ReactDOM.render(
-            <div>
-                <SalaryCalculator />
-            </div>,
-            document.getElementById('root')
-        )
+        ReactDOM.render(<SalaryCalculator />,document.getElementById('root'))
     </script>
 </head>
 <body>
