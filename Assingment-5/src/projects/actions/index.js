@@ -1,4 +1,4 @@
-import projectApi from '../services/projectsApi';
+import projectApi from '../services/projectApi';
 
 // let currentProjectId = 0;
 
